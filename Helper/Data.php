@@ -116,14 +116,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             $product = $this->_productRepository->getById($productId);
 
             $product->setCategoryId($category->getId());
-
             $urlData = $this->_catalogUrl->getRewriteByProductStore([$product->getId() => $category->getStoreId()]);
-            var_dump($urlData); die;
             if (!isset($urlData[$product->getId()])) {
-                return false;
+                $product->setUrlDataObject(new \Magento\Framework\DataObject($urlData[$product->getId()]));
             }
-            $product->setUrlDataObject(new \Magento\Framework\DataObject($urlData));
-
 
             if($product->getId()) {
                 return $product;
