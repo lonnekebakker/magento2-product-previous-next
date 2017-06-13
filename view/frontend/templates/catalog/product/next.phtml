@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © 2017 Studio Raz. All rights reserved.
+ * For more information contact us at dev@studioraz.co.il
+ * See COPYING_STUIDRAZ.txt for license details.
+ */
+/**
+ * @this \SR\PreviousNextNavigation\Block\Catalog\Product\PrevNextLink
+ */
+?>
+
+<?php if ($this->isProductExists()): ?>
+    <a href="<?php echo $this->getUrl() ?>" title="<?php echo $this->getTitle() ?>"><?php echo $this->getTitle() ?></a>
+<?php endif; ?>

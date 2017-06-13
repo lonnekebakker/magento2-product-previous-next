@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+<body>
+    <referenceContainer name="content">
+        <block template="catalog/product/previous.phtml" class="SR\PreviousNextNavigation\Block\Catalog\Product\PrevNextLink" name="sr_product_prev_link" before="-">
+            <arguments>
+                <argument name="is_next" xsi:type="boolean">false</argument>
+            </arguments>
+        </block>
+        <block template="catalog/product/next.phtml" class="SR\PreviousNextNavigation\Block\Catalog\Product\PrevNextLink" name="sr_product_next_link" before="-">
+            <arguments>
+                <argument name="is_next" xsi:type="boolean">true</argument>
+            </arguments>
+        </block>
+    </referenceContainer>
+</body>
+</page>
