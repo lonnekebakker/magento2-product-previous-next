@@ -77,7 +77,7 @@ class PrevNextLink extends Template
      *
      * @return string|bool
      */
-    public function getUrl()
+    public function getProductUrl()
     {
         if ($this->_product) {
             return $this->_product->getProductUrl();
