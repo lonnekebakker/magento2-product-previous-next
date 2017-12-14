@@ -143,12 +143,12 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             'category_id = :category_id'
         )->where(
             'store_id = :store_id'
-        );
+        )->order('position', 'ASC');
 
         $bind = [
             'category_id' => (int)$category->getId(),
             'store_id' => $category->getStoreId(),
-            ];
+        ];
 
         return $connection->fetchPairs($select, $bind);
 
